@@ -1,0 +1,17 @@
+
+{{define "Content" -}}
+This is the home page content
+<ul>
+{{- range $item := .Forum.Items -}}
+	<li>
+		{{- if $item.URL -}}
+			<a href="{{$item.URL}}">{{$item.Title | title}}</a>
+		{{- else -}}
+			{{$item.Title}}
+		{{- end -}}
+	</li>
+{{- end -}}
+</ul>
+{{- end}}
+
+{{define "Metabar"}}This is the home page metabar{{end}}
